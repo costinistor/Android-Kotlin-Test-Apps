@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         btnPopupSimple.setOnClickListener {
             startActivity(Intent(this, PopupSimple::class.java))
         }
+
+        btnPopupWithData.setOnClickListener {
+            startActivity(Intent(this, PopupSecond::class.java))
+        }
     }
 
 
