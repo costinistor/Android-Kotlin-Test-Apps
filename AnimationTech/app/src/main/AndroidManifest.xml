@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.GrowAnimXmlActivity"></activity>
+        <activity android:name=".activities.GrowAnimXmlActivity" />
         <activity android:name=".activities.GrowAnimCodeActivity" />
+        <activity android:name=".activities.FlipRowActivity"></activity>
     </application>
 
 </manifest>

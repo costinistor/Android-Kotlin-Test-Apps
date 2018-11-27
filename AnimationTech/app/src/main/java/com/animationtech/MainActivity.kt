@@ -3,6 +3,7 @@ package com.animationtech
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.animationtech.activities.FlipRowActivity
 import com.animationtech.activities.GrowAnimCodeActivity
 import com.animationtech.activities.GrowAnimXmlActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,8 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         btnAnimGrowXml.setOnClickListener { openGrowAnimXml() }
         btnAnimGrowCode.setOnClickListener { openGrowAnimCode() }
+        btnToFlip.setOnClickListener { openFlipRow() }
     }
 
     fun openGrowAnimXml() = startActivity(Intent(this, GrowAnimXmlActivity::class.java))
     fun openGrowAnimCode() = startActivity(Intent(this, GrowAnimCodeActivity::class.java))
+    fun openFlipRow() = startActivity(Intent(this, FlipRowActivity::class.java))
 }
