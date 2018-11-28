@@ -1,5 +1,6 @@
 package com.animationtech.activities
 
+import android.animation.ObjectAnimator
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
@@ -25,8 +26,13 @@ class GrowAnimXmlActivity : AppCompatActivity() {
     }
 
     fun growImage(){
-        val anim = AnimationUtils.loadAnimation(this, R.anim.grow)
-        faceIcon.startAnimation(anim)
+//        val anim = AnimationUtils.loadAnimation(this, R.anim.grow)
+//        faceIcon.startAnimation(anim)
+
+        ObjectAnimator.ofFloat(faceIcon, "scaleX", 2f).apply {
+            duration = 2000
+            start()
+        }
     }
 
     fun shrinkImage(){

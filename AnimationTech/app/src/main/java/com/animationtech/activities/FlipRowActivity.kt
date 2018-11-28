@@ -1,5 +1,6 @@
 package com.animationtech.activities
 
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,8 @@ import kotlin.coroutines.experimental.CoroutineContext
 
 class FlipRowActivity : AppCompatActivity(), CoroutineScope {
 
+    var sound: MediaPlayer? = null
+
     var job = Job()
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
@@ -23,6 +26,7 @@ class FlipRowActivity : AppCompatActivity(), CoroutineScope {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flip_row)
 
+        sound = MediaPlayer.create(this, R.raw.turn_page)
 
         btnTurn.setOnClickListener {
 
@@ -51,13 +55,17 @@ class FlipRowActivity : AppCompatActivity(), CoroutineScope {
     }
 
     suspend fun TextView.rotate(rotation: Float, string: String){
+        sound?.start()
         this.animate()
                 .rotationX(rotation)
                 //.setInterpolator(AnticipateOvershootInterpolator())
                 .setInterpolator(BounceInterpolator())
                 .setDuration(1200)
 
+
+
         delay(300)
         this.text = string
+
     }
 }
