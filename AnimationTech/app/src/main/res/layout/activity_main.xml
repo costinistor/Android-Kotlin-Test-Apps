@@ -29,6 +29,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Flip row animation"/>
+            <Button
+                android:id="@+id/btnAnimActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Animation between activities"/>
         </LinearLayout>
     </ScrollView>
 

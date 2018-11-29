@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".activities.GrowAnimXmlActivity" />
         <activity android:name=".activities.GrowAnimCodeActivity" />
-        <activity android:name=".activities.FlipRowActivity"></activity>
+        <activity android:name=".activities.FlipRowActivity" />
+        <activity android:name=".animtwoactivities.AnimFirstActivity" />
+        <activity android:name=".animtwoactivities.AnimSecondActivity"></activity>
     </application>
 
 </manifest>

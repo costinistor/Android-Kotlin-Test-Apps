@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.animationtech.animtwoactivities.AnimFirstActivity">
+
+    <RelativeLayout
+        android:id="@+id/btnToHappyFace"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageHappy"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:adjustViewBounds="false"
+            android:src="@drawable/ic_tag_faces_black_24dp"
+            android:transitionName="imageTransition"/>
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/imageHappy"
+            android:layout_toRightOf="@+id/imageHappy"
+            android:text="Happy face"
+            android:textColor="#900"
+            android:textSize="26sp"
+            android:transitionName="nameTransition"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,14 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!--&lt;!&ndash;enable window content transition&ndash;&gt;-->
-        <!--<item name="android:windowActivityTransitions">true</item>-->
-    </style>
+        <!--enable window content transition-->
+        <item name="android:windowActivityTransitions">true</item>
 
+
+
+    </style>
 </resources>
