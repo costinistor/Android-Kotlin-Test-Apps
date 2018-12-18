@@ -11,8 +11,8 @@ import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import com.animationtech.R
 import kotlinx.android.synthetic.main.activity_flip_row.*
-import kotlinx.coroutines.experimental.*
-import kotlin.coroutines.experimental.CoroutineContext
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
 class FlipRowActivity : AppCompatActivity(), CoroutineScope {
 
