@@ -10,7 +10,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity(), DialogUnits.OnUnitSelected, DialogAbout.OnAboutSelect {
 
-    private val consentFormGDPR = GdprConsentForm(this)
+    private val consentFormGDPR = ConsentFormGDPR(this)
     private var mainAds: MainAds = MainAds(this)
     private lateinit var bindView: ActivityMainBinding
 
