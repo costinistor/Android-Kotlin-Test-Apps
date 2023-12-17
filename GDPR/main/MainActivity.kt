@@ -10,7 +10,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity(), DialogUnits.OnUnitSelected, DialogAbout.OnAboutSelect {
 
-    private val gdprConsentForm = GdprConsentForm(this)
+    private val consentFormGDPR = GdprConsentForm(this)
     private var mainAds: MainAds = MainAds(this)
     private lateinit var bindView: ActivityMainBinding
 
@@ -36,6 +36,6 @@ class MainActivity : AppCompatActivity(), DialogUnits.OnUnitSelected, DialogAbou
 
     override fun onResume() {
         super.onResume()
-        mainAds.requestNewInterstitialForGDPR(this, gdprConsentForm)
+        mainAds.requestNewInterstitialAdWithConsentFormForGDPR(this, consentFormGDPR)
     }
 }
