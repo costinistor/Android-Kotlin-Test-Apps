@@ -9,7 +9,7 @@ import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
 import java.util.concurrent.atomic.AtomicBoolean
 
-class GdprConsentForm(val context: Context) {
+class ConsentFormGDPR(val context: Context) {
 
     private val TAG = "MyGdpr"
 
