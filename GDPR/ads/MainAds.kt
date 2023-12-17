@@ -52,12 +52,12 @@ class MainAds (val context: Context) {
         })
     }
 
-    fun requestNewInterstitialForGDPR(activity: Activity, gdprConsentForm: GdprConsentForm){
+    fun requestNewInterstitialForGDPR(activity: Activity, consentFormGDPR: ConsentFormGDPR){
         if (mInterstitialAd == null && !isChinaLocale())
             loadInterstitialAdForGDPR(activity, gdprConsentForm)
     }
 
-    private fun loadInterstitialAdForGDPR(activity: Activity, gdprConsentForm: GdprConsentForm){
+    private fun loadInterstitialAdForGDPR(activity: Activity, consentFormGDPR: ConsentFormGDPR){
         val adUnitId = context.getString(R.string.interstitial_ad)
         val adRequest = AdRequest.Builder().build()
 
@@ -76,7 +76,7 @@ class MainAds (val context: Context) {
         })
     }
 
-    private fun setConsentFormGDPR(activity: Activity, gdprConsentForm: GdprConsentForm){
+    private fun setConsentFormGDPR(activity: Activity, consentFormGDPR: ConsentFormGDPR){
         val isInternetConnected = CheckInternet().checkConnection(context)
         if(isInternetConnected){
             PrefAcceptConsentFormEU(context).setAccept(false)
